@@ -23,6 +23,7 @@ def show_page():
         file_bytes = np.array(bytearray(image.read()), dtype= np.uint8)
         img = cv2.imdecode(file_bytes, 1)
         st.image(img, channels= 'BGR', use_column_width= True)
+        button = st.button('تحلیل تصویر')  
         if button: 
             x = cv2.resize(img, (128, 128))
             x1 = img_to_array(x)
