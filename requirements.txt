@@ -2,4 +2,4 @@ keras==3.0.4
 numpy==1.26.3
 opencv_contrib_python==4.8.1.78
 opencv_python==4.8.1.78
-streamlit==1.31.0
+streamlit==1.26.0
