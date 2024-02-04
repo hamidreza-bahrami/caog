@@ -6,6 +6,8 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 from keras.models import load_model
 import cv2
 import time
+import warnings
+warnings.filterwarnings("ignore")
 
 model = load_model('model.h5')
 
