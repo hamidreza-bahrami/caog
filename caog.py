@@ -18,12 +18,12 @@ def show_page():
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
 
     image = st.file_uploader('آپلود تصویر', type=['jpg', 'jpeg'])     
-    Button = st.Button('تحلیل تصویر')  
+    button = st.button('تحلیل تصویر')  
     if image is not None:
         file_bytes = np.array(bytearray(image.read()), dtype= np.uint8)
         img = cv2.imdecode(file_bytes, 1)
         st.image(img, channels= 'BGR', use_column_width= True)
-        if Button: 
+        if button: 
             x = cv2.resize(img, (128, 128))
             x1 = img_to_array(x)
             x1 = x1.reshape((1,) + x1.shape)
